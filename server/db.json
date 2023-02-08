@@ -1,0 +1,77 @@
+[
+    {
+        "id": 1,
+        "firstname": "ayumi",
+        "lastname": "shira",
+        "ssn": 121234567,	
+        "picture":"ayumi.jpg",
+        "phone": 8013338188,	
+        "email": "abc@yahoo.com",
+        "address": "280 N Main Street",
+        "city": "Layton",
+        "state": "Utah",
+        "gender": "female",
+        "ontime": 0
+    },
+
+    {
+        "id": 2,
+        "firstname": "byumi",
+        "lastname": "hama",
+        "ssn": 654324789,	
+        "picture":"byumi.jpg",
+        "phone": 8015158188,	
+        "email": "opq@yahoo.com",
+        "address": "229 state street",
+        "city": "North Salt Lake",
+        "state": "Utah",
+        "gender": "female",
+        "ontime": 0
+    },
+
+    {
+        "id": 3,
+        "firstname": "cyuki",
+        "lastname": "ike",
+        "ssn": 541936810,	
+        "picture":"dyumi.jpg",
+        "phone": 8014548188,	
+        "email": "xyz@yahoo.com",
+        "address": "1360 w Funny Drive",
+        "city": "Syracuse",
+        "state": "Utah",
+        "gender": "male",
+        "ontime": 0
+    },
+
+    {
+        "id": 4,
+        "firstname": "dyumo",
+        "lastname": "oka",
+        "ssn": 6369362410,	
+        "picture":"cyumi.jpg",
+        "phone": 8014548188,	
+        "email": "xyz@yahoo.com",
+        "address": "1708 w FBI way",
+        "city": "Salt Lake City",
+        "state": "Utah",
+        "gender": "male",
+        "ontime": 0
+    },
+
+    {
+        "id": 5,
+        "firstname": "elmo",
+        "lastname": "oka",
+        "ssn": 6369362410,	
+        "picture":"cyumi.jpg",
+        "phone": 8014548188,	
+        "email": "xyz@yahoo.com",
+        "address": "575 w 1000 s",
+        "city": "Clearfield",
+        "state": "Utah",
+        "gender": "other",
+        "ontime": 0
+    }
+
+]
