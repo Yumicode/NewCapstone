@@ -1,6 +1,7 @@
 let employees = require('./eeDb.json')
-let 
+let userDb = require('./userDb.json')
 let globalID = 6
+let userID = 1
 
 module.exports = {
     getEmployees:(req, res) => {
@@ -8,14 +9,17 @@ module.exports = {
 
     },
     addUser:(req, res) => {
-        const {userid, email, password} = req.body
-    
-        let user = {
-            userid: 0,
-            useremail: 'email',
-            password: 'password'
+        console.log(req)
+        const {email, password} = req.body
+
+        let newUser = {
+            userID: userID,
+            email: email,
+            password: password
        }
-        res.status(200).send(users)
+        userDb.push(newUser)
+        userID++
+        res.status(200).send(userDb)
     },
 
     addEmployee:(req, res) => {
