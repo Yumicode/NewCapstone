@@ -10,10 +10,13 @@ app.use(express.json())
 app.use(cors())
 
 // Endpoints
-const {getEmployees, addEmployee, deleteEmployee, updateEmployee} = require('./controller')
+const {getEmployees, addEmployee, deleteEmployee, updateEmployee, registerAccount} = require('./controller')
 
 app.get('/employees', getEmployees)
 app.post('/employees', addEmployee)
+app.post('/register', registerAccount)
+
+
 app.delete('/employees/:id', deleteEmployee)
 app.put('/employees/:id', updateEmployee)
 

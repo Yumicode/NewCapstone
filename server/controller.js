@@ -7,6 +7,16 @@ module.exports = {
         res.status(200).send(employees)
 
     },
+
+    registerAccount:(req, res) => {
+        const {email, password} = req.body
+
+        let newAccount = {
+            id: userID
+
+        }
+    },
+
     addEmployee:(req, res) => {
         const {firstname, lastname, ssn, url, phone, email, address, city, state, gender } = req.body
         
