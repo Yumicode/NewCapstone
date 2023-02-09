@@ -1,5 +1,5 @@
-let employees = require('./db.json')
-
+let employees = require('./eeDb.json')
+let 
 let globalID = 6
 
 module.exports = {
@@ -7,14 +7,15 @@ module.exports = {
         res.status(200).send(employees)
 
     },
-
-    registerAccount:(req, res) => {
-        const {email, password} = req.body
-
-        let newAccount = {
-            id: userID
-
-        }
+    addUser:(req, res) => {
+        const {userid, email, password} = req.body
+    
+        let user = {
+            userid: 0,
+            useremail: 'email',
+            password: 'password'
+       }
+        res.status(200).send(users)
     },
 
     addEmployee:(req, res) => {
@@ -42,7 +43,7 @@ module.exports = {
 
         res.status(200).send(employees)
 
-    },
+ },
 
     deleteEmployee:(req, res) => {
         const index = employees.findIndex((el) => el.id === +req.params.id)
@@ -51,7 +52,7 @@ module.exports = {
 
         res.status(200).send(employees)
 
-    },
+},
 
     updateEmployee:(req, res) => {
         const index = employees.findIndex((el) => el.id === +req.params.id)
@@ -66,4 +67,6 @@ module.exports = {
 
         res.status(200).send(employees)
 }
+
 }
+

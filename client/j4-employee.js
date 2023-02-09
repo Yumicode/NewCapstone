@@ -37,3 +37,34 @@ getQuarySubmit.addEventListener('click', () => {
         .then(res => addToView(res.data))
 });
 
+let employeeAdd = {
+    employeeid: 0,
+    employeefirstname: 'firstname',
+    employeelastname: 'lastname',
+}
+
+axios.post('/employees').then()
+
+let employeeUpdate = {
+    employeeid: 0,
+    employeefirstname: 'firstname',
+    employeelastname: 'lastname',
+}
+
+axios.put('/employees').then()
+
+let employeedelete = {
+    employeeid: 0,
+    employeefirstname: 'firstname',
+    employeelastname: 'lastname',
+}
+
+axios.delete('/employees').then()
+
+
+
+
+
+
+
+
