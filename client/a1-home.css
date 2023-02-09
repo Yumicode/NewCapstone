@@ -7,3 +7,9 @@ p {
 font-size: large;
 
 }
+
+input[type=submit]{
+    background-color: blueviolet;
+    color: white;
+}
+

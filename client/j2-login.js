@@ -1,10 +1,4 @@
-// // function newDoc() {
-// //     window.location.assign("http://127.0.0.1:5500/client/3-account.html")
-// //   }
 
-// // function newDoc() {
-// //     window.location.assign("http://127.0.0.1:5500/client/3-account.html")
-// //   }
 // step 1) grab id from html file
 const registrationForm = document.getElementById('createAccount')
 const registrationEmail = document.getElementById('registrationEmail')
@@ -21,6 +15,7 @@ function addAccount (event) {
     axios.post('http://localhost:4000/users', body)
     .then((res) => {
         console.log(res.data)
+        alert(`an account with this email: ${body.email} is now good to go`) 
     })
     .catch(err => console.log(err))
 

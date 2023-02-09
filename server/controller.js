@@ -9,7 +9,7 @@ module.exports = {
 
     },
     addUser:(req, res) => {
-        console.log(req)
+        console.log(req.body)
         const {email, password} = req.body
 
         let newUser = {
