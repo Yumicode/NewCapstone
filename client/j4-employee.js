@@ -1,15 +1,9 @@
-// function newDoc() {
-//     window.location.assign("http://127.0.0.1:5500/client/3-account.html")
-//   }
-
-// function newDoc() {
-//     window.location.assign("http://127.0.0.1:5500/client/3-account.html")
-//   }
+const { getEmployees } = require("../server/controller");
 
 //submit buttons
-const getSubmit = document.getElementById('getSubmit');
-const getParamsSubmit = document.getElementById('getParamsSubmit');  
-const getQureySubmit = document.getElementById('getQuerySubmit');
+const getSubmit = document.getElementById('getEmployees');
+const getParamsSubmit = document.getElementById('getParamsEmployees');  
+const getQureySubmit = document.getElementById('getQueryEmployees');
 
 //input
 const paramsInput = document.getElementById('params-input');
@@ -19,25 +13,43 @@ const QueryInput = document.getElementById('query-input');
 const responseSection = document.getElementsByClassName('response-area')[0];
 
 //handle submits
-getSubmit.addEventListener('click', () => {
+getEmployees.addEventListener('click', () => {
     axios   
-        .get('http://localhost:4000/users')
+        .get('http://localhost:4000/employees')
         .then(res => addToView(res.data))
 });
 
 getParamsSubmit.addEventListener('click', () => {
     axios   
-        .get(`http://localhost:4000/users/${paramsInput.value}`)
+        .get(`http://localhost:4000/employees/${paramsInput.value}`)
         .then(res => addToView(res.data))
 });
 
 getQuarySubmit.addEventListener('click', () => {
     axios   
-        .get(`http://localhost:4000/users${quaryInput.value}`)
+        .get(`http://localhost:4000/employees${quaryInput.value}`)
         .then(res => addToView(res.data))
 });
 
-let employeeAdd = {
+let EmployeeGet = {
+        employeeid: 0,
+        employeefirstname: 'firstname',
+        employeelastname: 'lastname',
+        employeessn: ssn,	
+        picture:url,
+        phone: phone,	
+        email: email,
+        address: address,
+        city: city,
+        state: state,
+        gender: gender,
+        rating: 0
+
+    }
+
+axios.post('/employees').then()
+
+let EmployeeAdd = {
     employeeid: 0,
     employeefirstname: 'firstname',
     employeelastname: 'lastname',
