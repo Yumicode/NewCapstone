@@ -16,26 +16,26 @@ const responseSection = document.getElementsByClassName('response-area')[0];
 getEmployees.addEventListener('click', () => {
     axios   
         .get('http://localhost:4000/employees')
-        .then(res => addToView(res.data))
+        .then(res => getEmployees(res.data))
 });
 
-getParamsSubmit.addEventListener('click', () => {
-    axios   
-        .get(`http://localhost:4000/employees/${paramsInput.value}`)
-        .then(res => addToView(res.data))
-});
+// getParamsEmployee.addEventListener('click', () => {
+//     axios   
+//         .get(`http://localhost:4000/employees/${paramsInput.value}`)
+//         .then(res => addToView(res.data))
+// });
 
-getQuarySubmit.addEventListener('click', () => {
-    axios   
-        .get(`http://localhost:4000/employees${quaryInput.value}`)
-        .then(res => addToView(res.data))
-});
+// getQuaryEmployee.addEventListener('click', () => {
+//     axios   
+//         .get(`http://localhost:4000/employees${quaryInput.value}`)
+//         .then(res => addToView(res.data))
+// });
 
-let EmployeeGet = {
-        employeeid: 0,
-        employeefirstname: 'firstname',
-        employeelastname: 'lastname',
-        employeessn: ssn,	
+let AddEmployee = {
+        eeid: 0,
+        eefirstname: 'firstname',
+        eelastname: 'lastname',
+        eessn: ssn,	
         picture:url,
         phone: phone,	
         email: email,

@@ -8,41 +8,31 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-const {getEmployees, addEmployee, deleteEmployee, updateEmployee, addUser} = require('./controller')
+const {getEmployee, addEmployee, deleteEmployee, updateEmployee, addUser} = require('./controller')
 
 app.get('/employee', (req, res) => {
-    res.status(200).send(employees)
-})
-let eeid = 6
-app.post('/addEmployee', (req, res) => {
     const {firstname, lastname, ssn, picture, phone, email, address, city, state, gender, ontime} = req.body
-    
-    let addEmployee={
-        eeid: eeid,
-        firstname: firstname,
-        lastname: lastname,
-        ssn: ssn,	
-        picture:picture,
-        phone: phone,	
-        email: email,
-        address: address,
-        city: city,
-        state: state,
-        gender: gender,
-        ontime: ontime,
-    }
-    employees.push(newEmployee)
+    // let getEmployee={
+    //     eeid: eeid,
+    //     eefirstname: firstname,
+    //     eelastname: lastname,
+    //     eessn: ssn,	
+    //     eepicture:picture,
+    //     eephone: phone,	
+    //     eeemail: email,
+    //     eeaddress: address,
+    //     eecity: city,
+    //     eestate: state,
+    //     eegender: gender,
+    //     eeontime: ontime,
+res.status(200).send(employees)
+}),
 
-    eeid++
-
-    res.status(200).send(employees)
-
-})
-app.get('/employee/:id', getEmployees)
-app.post('/employee/:id', addEmployee)
-app.delete('/employees/:id', deleteEmployee)
-app.put('/employees/:id', updateEmployee)
-app.post('/users', addUser)
+app.get('/employees/:id', getEmployee),
+app.post('/employees', addEmployee),
+app.put('/employees/:id', updateEmployee),
+app.delete('/employees/:id', deleteEmployee),
+app.post('/users', addUser),
 // Start server with app.listen
 
-app.listen(4000, () => console.log('Server running on port 4000'))
+app.listen(4000, () => console.log('Server running on port 4000'));
