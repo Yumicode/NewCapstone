@@ -1,82 +1,54 @@
-const { getEmployees } = require("../server/controller");
+// step 1) grab id from html file
+const getForm = document.getElementById('getEmployees');
+const getFirstame = document.getElementById('eeFirstName');  
+const getSsn= document.getElementById('eeSsn');
+const getPicture= document.getElementById('eePicture');
+const getPhone= document.getElementById('eePhone');
+const getEmail= document.getElementById('eeEmail');
+const getAddress= document.getElementById('eeAddress');
+const getCity= document.getElementById('eeCity');
+const getState= document.getElementById('eeState');
+const getGender= document.getElementById('eeGender');
+const getRation= document.getElementById('eeRating')
 
-//submit buttons
-const getSubmit = document.getElementById('getEmployees');
-const getParamsSubmit = document.getElementById('getParamsEmployees');  
-const getQureySubmit = document.getElementById('getQueryEmployees');
-
-//input
-const paramsInput = document.getElementById('params-input');
-const QueryInput = document.getElementById('query-input');
-
-//response Section 
-const responseSection = document.getElementsByClassName('response-area')[0];
-
-//handle submits
-getEmployees.addEventListener('click', () => {
-    axios   
-        .get('http://localhost:4000/employees')
-        .then(res => getEmployees(res.data))
-});
-
-// getParamsEmployee.addEventListener('click', () => {
-//     axios   
-//         .get(`http://localhost:4000/employees/${paramsInput.value}`)
-//         .then(res => addToView(res.data))
-// });
-
-// getQuaryEmployee.addEventListener('click', () => {
-//     axios   
-//         .get(`http://localhost:4000/employees${quaryInput.value}`)
-//         .then(res => addToView(res.data))
-// });
-
-let AddEmployee = {
-        eeid: 0,
-        eefirstname: 'firstname',
-        eelastname: 'lastname',
-        eessn: ssn,	
-        picture:url,
-        phone: phone,	
-        email: email,
-        address: address,
-        city: city,
-        state: state,
-        gender: gender,
-        rating: 0
+// step 2) create callback function = function inside a function
+function getEmployee (event) {
+    event.preventDefault()
+    let body = {
+        
+        firstname: eeFirstName.value, 
+        lastname:  eeLastName.value,
+        ssn: eeSsn.value,
+        picture:  eePicture.value,
+        phone: eePhone.value,
+        email: eeEmail.value,
+        address: eeAddress.value,
+        city: eeCity.value,
+        state: eeState.value,
+        gender: eeGender.value,
+        rating: eeRating.value,
 
     }
 
-axios.post('/employees').then()
+    axios.post('http://localhost:4000/employee', body)
+    .then((res) => {
+        console.log(res.data)
+        alert(`the account was successfully retrived with this email: ${body.email}`) 
+    })
+    .catch(err => console.log(err))
 
-let EmployeeAdd = {
-    employeeid: 0,
-    employeefirstname: 'firstname',
-    employeelastname: 'lastname',
 }
 
-axios.post('/employees').then()
+// step 3) add event listener
+getForm.addEventListener("submit", getEmployee)
 
-let employeeUpdate = {
-    employeeid: 0,
-    employeefirstname: 'firstname',
-    employeelastname: 'lastname',
+
+getAllBtn.addEventListener('click', getAllEmployees)
+
+const getAEmployee = (event)=> {
+  console.log(event.target.id)
+}         
+
+for(let i = 0; i < employeeBtns.length; i++) {
+    employeeBtns[i].addEventListener('click', getAEmployee)
 }
-
-axios.put('/employees').then()
-
-let employeedelete = {
-    employeeid: 0,
-    employeefirstname: 'firstname',
-    employeelastname: 'lastname',
-}
-
-axios.delete('/employees').then()
-
-
-
-
-
-
-
-

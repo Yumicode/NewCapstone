@@ -4,168 +4,40 @@
   <link rel="stylesheet" href="./a1-home.css">
   <title>Employee Page</title>
 </head>
-<h2> Get Employee</h2>
+
 <body>
   <nav>
-    <form id="getEmployees">
-    ID:
-    <input type="number"/>
-    <!-- First Name:
-    <input type="text"/>
-    Last Name:
-    <input type="text"/>
-    SSN:
-    <input type="number"/>
-    Phone:
-    <input type="number"/>
-    Email:
-    <input type="email"/>
-    Picture Id:
-    <input type="image"/>
-    City:
-    <input type="tex"/>
-    State:
-    <input type="text"/>
-    Zip Code:
-    <input type="text"/>
-    Gender:
-    <input type="text"/>
-    Rating:
-    <input type="number"/> -->
-    
-    <script>
-      function newDoc() {
-        window.location.assign("http://localhost:4000/employee")
-      }
-      </script>
-      </head>
-      <body>
-      
-      <input type="button" value="Get" onclick="newDoc()">
-<!-- <h2> Add new Employee</h2>
-<body>
-  <nav>
-    <form id="Add">
-    ID:
-    <input type="number"/> 
-    <!-First Name:
-    <input type="text"/>
-    Last Name:
-    <input type="text"/>
-    SSN:
-    <input type="number"/>
-    Phone:
-    <input type="number"/>
-    Email:
-    <input type="email"/>
-    Picture Id:
-    <input type="image"/>
-    City:
-    <input type="tex"/>
-    State:
-    <input type="text"/>
-    Zip Code:
-    <input type="text"/>
-    Gender:
-    <input type="text"/>
-    Rating:
-    <input type="number"/>
-    <script>
-      function newDoc() {
-        window.location.assign("http://127.0.0.1:5500/client/5-payrollentry.html")
-      }
-      </script>
-      </head>
-      <body>
-      -->
-      <input type="button" value="Add" onclick="newDoc()">
+  <h1> Get Employee</h1>
+  <form id="getEmployees">
+  <h2>First Name</h2>
+  <input id="eeFirstName" type= "firstname"/>
+  <h2>Last Name</h2>
+  <input id="eeLastName" type= "lastname"/>
+  <h2>SSN</h2>
+  <input id="eeSsn" type= "ssn"/>
+  <h2>Picture</h2>
+  <input id="eePicture" type= "picture"/>
+  <h2>Phone</h2>
+  <input id="eePhone" type= "phone"/>
+  <h2>Email</h2>
+  <input id="eeEmail" type= "email"/>
+  <h2>Address</h2>
+  <input id="eeAddress" type= "address"/>
+  <h2>City</h2>
+  <input id="eeCity" type= "city"/>
+  <h2>State</h2>
+  <input id="eeState" type= "state"/>
+  <h2>Gender</h2>
+  <input id="eeGender" type= "gender"/>
+  <h2>Rating</h2>
+  <input id="eeRating" type= "rating"/>
 
-      <!-- <h2> Edit an Employee</h2>
-      <nav>
-        <form id="Update">
-        ID:
-        <input type="number"/>
-        First Name:
-        <input type="text"/>
-        Last Name:
-        <input type="text"/>
-        SSN:
-        <input type="number"/>
-        Phone:
-        <input type="number"/>
-        Email:
-        <input type="email"/> -->
-        <!-- Picture Id:
-        <input type="image"/>
-        City:
-        <input type="tex"/>
-        State:
-        <input type="text"/>
-        Zip Code:
-        <input type="text"/>
-        Gender:
-        <input type="text"/>
-        Rating:
-        <input type="number"/>
-        
-        <script>
-          function newDoc() {
-            window.location.assign("http://127.0.0.1:5500/client/5-payrollentry.html")
-          }
-          </script>
-          </head>
-          <body> 
-            -->
-<!--       
-          <input type="button" value="Update" onclick="newDoc()">
+  <input type="submit"/>
 
-          <h2> Delete an Employee</h2>
-      <nav>
-        <form id="Delete">
-        ID:
-        <input type="number"/>
-        First Name:
-        <input type="text"/>
-        Last Name:
-        <input type="text"/>
-        SSN:
-        <input type="number"/>
-        Phone:
-        <input type="number"/>
-        Email:
-        <input type="email"/>
-        Picture Id:
-        <input type="image"/>
-        City:
-        <input type="tex"/>
-        State:
-        <input type="text"/>
-        Zip Code:
-        <input type="text"/>
-        Gender:
-        <input type="text"/>
-        Rating:
-        <input type="number"/>
-         -->
-        <!-- <script>
-          function newDoc() {
-            window.location.assign("http://127.0.0.1:5500/client/5-payrollentry.html")
-          }
-          </script>
-          </head>
-          <body>
-          
-          <input type="button" value="Delete" onclick="newDoc()"> --> -->
-      </body>
 </form>
-
-    
-    </body>
 
 
   </nav>
-  
-
 
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <scrip src="./j4-employee.js"></scrip>
